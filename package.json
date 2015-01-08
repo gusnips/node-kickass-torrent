@@ -22,5 +22,7 @@
     "url": "https://github.com/gusnips/node-kickass-torrent/issues"
   },
   "homepage": "https://github.com/gusnips/node-kickass-torrent",
-  "dependencies": {}
+  "dependencies": {
+    "load-json": "*"
+  }
 }
