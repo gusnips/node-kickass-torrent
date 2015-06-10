@@ -1,5 +1,5 @@
 var getJson=require('load-json')
-var BASE_URL='http://kickass.to'
+var BASE_URL='http://kat.cr'
 
 /**
  * {String|Object} query string or options f.x {}
