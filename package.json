@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/gusnips/node-kickass-torrent",
   "dependencies": {
-    "load-json": "*"
+    "request": "*"
   }
 }
