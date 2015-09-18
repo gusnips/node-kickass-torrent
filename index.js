@@ -12,19 +12,19 @@ module.exports=function(options, callback){
 
     options.url = null;
     var params = {
-      qs: options,
-      url: url
+        qs: options,
+        url: url
     };
 
     request(params, function(err, response, raw){
-      if(err) { return callback(err, null); }
+        if(err) { return callback(err, null); }
 
-      try {
+        try {
         var data = JSON.parse(raw);
-      } catch(err) {
+        } catch(err) {
         return callback(err, null);
-      }
+        }
 
-      callback(null, data);
+        callback(null, data);
     });
 }
