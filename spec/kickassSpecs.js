@@ -31,8 +31,8 @@ describe('kickass', function(){
         })
     });
 
-    it("should return an empty list", function(done) {
-        params.q = "3d8f7c6e91bbaa6766948ec13320533f"
+    it('should return an empty list', function(done) {
+        params.q = '3d8f7c6e91bbaa6766948ec13320533f';
         kickass(params, function(err, result) {
             expect(err).toBeNull();
             expect(result.list.length).toBe(0);
