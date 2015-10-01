@@ -25,7 +25,7 @@ kickass({
     field:'seeders',//seeders, leechers, time_add, files_count, empty for best match
     order:'desc',//asc or desc
     page: 2,//page count, obviously
-    url: 'http://kickass.to',//changes site default url (http://kickass.to)
+    url: 'https://kat.cr',//changes site default url (https://kat.cr)
 },function(e, data){
     //will get the contents from
     //http://kickass.to/json.php?q=test&field=seeders&order=desc&page=2
