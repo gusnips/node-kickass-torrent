@@ -1,5 +1,5 @@
-var getJson=require('load-json')
-var BASE_URL='http://kat.cr'
+var request=require('request');
+var BASE_URL='https://kat.cr';
 
 /**
  * {String|Object} query string or options f.x {}
@@ -8,14 +8,23 @@ var BASE_URL='http://kat.cr'
  * http://kickass.to/json.php?q=test&field=seeders&order=desc&page=2
  */
 module.exports=function(options, callback){
-    if(typeof options==='string')
-        options={q: options}
-    if(!options.q)
-        return callback(new Error('Search term "q" must be defined'))
     var url=(options.url || BASE_URL) + '/json.php';
-    getJson(url, options, function(e, response){
-        if(e)
-            return callback(e)
-        callback(null, response)
-    })
+
+    options.url = null;
+    var params = {
+        qs: options,
+        url: url
+    };
+
+    request(params, function(err, response, raw){
+        if(err) { return callback(err, null); }
+
+        try {
+        var data = JSON.parse(raw);
+        } catch(err) {
+        return callback(err, null);
+        }
+
+        callback(null, data);
+    });
 }
