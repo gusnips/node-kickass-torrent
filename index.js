@@ -1,5 +1,5 @@
 var request=require('request');
-var BASE_URL='https://kat.cr';
+var BASE_URL='https://kat.am';
 
 /**
  * {String|Object} query string or options f.x {}
